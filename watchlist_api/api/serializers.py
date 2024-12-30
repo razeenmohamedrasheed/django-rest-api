@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from watchlist_api.models import Movies
+from watchlist_api.models import WatchList
 
 
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Movies
+        model = WatchList
         fields = "__all__"
 
     def validate(self,data):
