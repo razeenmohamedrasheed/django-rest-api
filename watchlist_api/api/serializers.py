@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from watchlist_api.models import WatchList
+from watchlist_api.models import WatchList , StreamingPlatform
 
 
 class MovieSerializer(serializers.ModelSerializer):
@@ -18,6 +18,11 @@ class MovieSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Length too short")
         else:
             return value
+
+class StreamingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StreamingPlatform
+        fields = '__all__'
 
 # class MovieSerializer(serializers.Serializer):
 #     id = serializers.IntegerField(read_only=True)
