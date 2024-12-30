@@ -1,5 +1,5 @@
 from rest_framework import status
-from watchlist_api.models import Movies
+from watchlist_api.models import WatchList
 from watchlist_api.api.serializers import MovieSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -11,7 +11,7 @@ def list_movies(request):
     Retrieve a list of all movies.
     """
     try:
-        movies = Movies.objects.all()
+        movies = WatchList.objects.all()
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
@@ -24,7 +24,7 @@ def movie_detail(request, pk):
     Retrieve, update, or delete a specific movie by ID.
     """
     try:
-        movie = Movies.objects.get(pk=pk)
+        movie = WatchList.objects.get(pk=pk)
     except Exception as e:
         return Response({"error": "Movie not found."}, status=status.HTTP_404_NOT_FOUND)
 
