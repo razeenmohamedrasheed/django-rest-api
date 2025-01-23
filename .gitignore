@@ -1,55 +1,89 @@
-# Python bytecode files
-*.py[cod]
+# Created by https://www.gitignore.io
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+
+# C extensions
 *.so
 
-# Django stuff
-*.log
-*.pot
-*.pyc
-db.sqlite3
-instance/
-media/
-staticfiles/
-*.sqlite3
-
-# Environment variables
-.env
-
-# Virtual environments
-.venv/
-venv/
-ENV/
+# Distribution / packaging
+.Python
 env/
-env.bak/
-venv.bak/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# IDEs and text editors
-.vscode/
-.idea/
-*.swp
-*.xml
-*.swo
-*.swn
-*~
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Testing
+# Unit test / coverage reports
 htmlcov/
 .tox/
-.nox/
-coverage.*
+.coverage
 .cache
 nosetests.xml
 coverage.xml
-*.cover
-.hypothesis/
 
-# Build files
-*.egg
-*.egg-info/
-dist/
-build/
+# Translations
+*.mo
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+.env
+db.sqlite3
